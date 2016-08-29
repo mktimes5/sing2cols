@@ -5,7 +5,7 @@
 //-------------------------------------------------------------------------------------------|
 
 
-function mikesCK_ckeditor_plugin() {
+function sing2cols_ckeditor_plugin() {
   $module_path = drupal_get_path('module', 'sing2cols');
   return array(
     'mikesCK' => array(
