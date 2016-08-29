@@ -1,8 +1,9 @@
+/*
 CKEDITOR.plugins.add( 'sing2ocls',
 {
-	requires: 'widget',
+	//requires: 'widget',
 
-	icons: 'icons/twocols.png',
+	//icons: 'icons/twocols.png',
 
 	init: function( editor ) {
 			editor.widgets.add( 'sing2cols'),
@@ -16,4 +17,31 @@ CKEDITOR.plugins.add( 'sing2ocls',
 	} );
 
 
+} );
+*/
+
+
+CKEDITOR.plugins.add( 'singtwocols',
+{
+	init: function( editor )
+	{
+		editor.addCommand( 'singtwocolscom',
+			{
+				exec : function( editor )
+			{    
+				
+				editor.insertHtml( '<p>sing2cols</p>' , 'unfiltered_html' );
+			}
+		});
+
+
+		
+		editor.ui.addButton( 'singtwocols',
+			{
+				label: 'singular 2 cols',
+				command: 'singtwocolscom',
+				icon: this.path + 'icons/twocols.png'
+			} );
+
+	}
 } );

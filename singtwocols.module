@@ -5,17 +5,17 @@
 //-------------------------------------------------------------------------------------------|
 
 
-function sing2cols_ckeditor_plugin() {
-  $module_path = drupal_get_path('module', 'sing2cols');
+function singtwocols_ckeditor_plugin() {
+  $module_path = drupal_get_path('module', 'singtwocols');
   return array(
-    'mikesCK' => array(
-      'name' => 'Singular 2cols',
+    'singtwocols' => array(
+      'name' => 'Singular two cols',
       'desc' => 'Create two Columns',
       'path' => $module_path . '/static/',
       'buttons' => array(
         'mikesCK' => array(
           'icon' => 'icons/twocols.png',
-          'label' => 'Singular 2cols',
+          'label' => 'Singular two cols',
         ),
       ),
     ),
