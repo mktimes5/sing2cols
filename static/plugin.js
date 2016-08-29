@@ -1,24 +1,11 @@
-CKEDITOR.plugins.add( 'mikesCK',
+CKEDITOR.plugins.add( 'sing2ocls',
 {
-	init: function( editor )
-	{
-		editor.addCommand( 'mikesCKcom',
-			{
-				exec : function( editor )
-			{    
-				
-				editor.insertHtml( '<p>MikesCK</p>' , 'unfiltered_html' );
-			}
-		});
+	requires: 'widget',
 
+	icons: 'icons/twocols.png',
 
-		
-		editor.ui.addButton( 'mikesCK',
-			{
-				label: 'Insert mikes phrase',
-				command: 'mikesCKcom',
-				icon: this.path + 'icons/circle.png'
-			} );
-
+	inti: function ( editor ) {
+		// code
 	}
+
 } );
