@@ -1,0 +1,23 @@
+<?php
+
+//-------------------------------------------------------------------------------------------|
+//  hook_ckeditor_plugin
+//-------------------------------------------------------------------------------------------|
+
+
+function mikesCK_ckeditor_plugin() {
+  $module_path = drupal_get_path('module', 'mikesCK');
+  return array(
+    'mikesCK' => array(
+      'name' => 'Singular 2cols',
+      'desc' => 'Create two Columns',
+      'path' => $module_path . '/static/',
+      'buttons' => array(
+        'mikesCK' => array(
+          'icon' => 'icons/circle.png',
+          'label' => 'Singular 2cols',
+        ),
+      ),
+    ),
+  );
+}
