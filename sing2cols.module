@@ -6,7 +6,7 @@
 
 
 function mikesCK_ckeditor_plugin() {
-  $module_path = drupal_get_path('module', 'mikesCK');
+  $module_path = drupal_get_path('module', 'sing2cols');
   return array(
     'mikesCK' => array(
       'name' => 'Singular 2cols',
@@ -14,7 +14,7 @@ function mikesCK_ckeditor_plugin() {
       'path' => $module_path . '/static/',
       'buttons' => array(
         'mikesCK' => array(
-          'icon' => 'icons/circle.png',
+          'icon' => 'icons/twocols.png',
           'label' => 'Singular 2cols',
         ),
       ),

@@ -4,8 +4,16 @@ CKEDITOR.plugins.add( 'sing2ocls',
 
 	icons: 'icons/twocols.png',
 
-	inti: function ( editor ) {
-		// code
+	init: function( editor ) {
+			editor.widgets.add( 'sing2cols'),
+				//code here
+		} );
 	}
+
+	// create a button
+	editor.widgets.add( 'sing2cols' ), {
+		button: 'Singular 2 columns'
+	} );
+
 
 } );
