@@ -6,7 +6,7 @@ CKEDITOR.dialog.add( 'singDialog', function( editor ) {
 
 		contents: [
 			{
-				id: 'tab basic',
+				id: 'tab-basic',
 				label: 'basic settings',
 				elements: [
 					{
@@ -34,6 +34,20 @@ CKEDITOR.dialog.add( 'singDialog', function( editor ) {
             		}
 				]
 			}
-		]
+		],
+		onOk: function() {
+            var dialog = this;
+
+            var abbr = editor.document.createElement( 'abbr' );
+            abbr.setAttribute( 'title', dialog.getValueOf( 'tab-basic', 'title' ) );
+            abbr.setText( dialog.getValueOf( 'tab-basic', 'abbr' ) );
+
+            var id = dialog.getValueOf( 'tab-adv', 'id' );
+            if ( id )
+                abbr.setAttribute( 'id', id );
+
+            editor.insertElement( abbr );
+        }
+
 	};
 });
