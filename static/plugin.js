@@ -13,6 +13,7 @@ CKEDITOR.plugins.add( 'singtwocols',
 				icon: this.path + 'icons/twocols.png'
 		} );
 
+		editor.addContentsCss( this.path + 'styles/singtwocols.css' );
 
 		CKEDITOR.dialog.add( 'singDialog', this.path + 'dialogs/singcolsDialog.js' );
 

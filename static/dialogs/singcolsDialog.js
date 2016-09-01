@@ -6,21 +6,13 @@ CKEDITOR.dialog.add( 'singDialog', function( editor ) {
 
 		contents: [
 			{
-				id: 'tab-basic',
-				label: 'basic settings',
+				id: 'left-col',
+				label: 'left column',
 				elements: [
 					{
-			            type: 'text',
-		                id: 'abbr',
-		                label: 'Abbreviation',
-		                validate: CKEDITOR.dialog.validate.notEmpty( "Abbreviation field cannot be empty." )
-			        },
-			        {
-			            type: 'text',
-			            id: 'title',
-			            label: 'Explanation',
-			            validate: CKEDITOR.dialog.validate.notEmpty( "Explanation field cannot be empty." )
-			         }
+			            type: 'html',
+		                html:'<div class="col-wrap"><p>col-wrap</p></div>'
+			        }
 				]
 			},
 			{
@@ -37,16 +29,11 @@ CKEDITOR.dialog.add( 'singDialog', function( editor ) {
 		],
 		onOk: function() {
             var dialog = this;
+            var colWrap = CKEDITOR.dom.element.createFromHtml( '<div class="col-wrap">hello</div>' );
+            editor.insertElement(colWrap);
+            //var twocols = dialog.getContentElement( 'left-col' );
 
-            var abbr = editor.document.createElement( 'abbr' );
-            abbr.setAttribute( 'title', dialog.getValueOf( 'tab-basic', 'title' ) );
-            abbr.setText( dialog.getValueOf( 'tab-basic', 'abbr' ) );
-
-            var id = dialog.getValueOf( 'tab-adv', 'id' );
-            if ( id )
-                abbr.setAttribute( 'id', id );
-
-            editor.insertElement( abbr );
+            //editor.insertElement( twocols );
         }
 
 	};
