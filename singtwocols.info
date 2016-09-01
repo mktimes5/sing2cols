@@ -1,4 +1,4 @@
-name = Singular two columns CK
-description = Creates a two column layout for CK editor
+name = singtwocols CK Plugin dev
+description = Creates a ckeditor button 
 core = 7.x
 dependencies[] = ckeditor:ckeditor

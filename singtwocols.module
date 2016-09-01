@@ -9,13 +9,13 @@ function singtwocols_ckeditor_plugin() {
   $module_path = drupal_get_path('module', 'singtwocols');
   return array(
     'singtwocols' => array(
-      'name' => 'Singular two cols',
-      'desc' => 'Create two Columns',
+      'name' => 'singtwocols',
+      'desc' => 'Singular Two Columns insert',
       'path' => $module_path . '/static/',
       'buttons' => array(
-        'mikesCK' => array(
+        'singtwocols' => array(
           'icon' => 'icons/twocols.png',
-          'label' => 'Singular two cols',
+          'label' => 'Sing Button',
         ),
       ),
     ),
