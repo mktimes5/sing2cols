@@ -2,3 +2,4 @@ name = singtwocols CK Plugin dev
 description = Creates a ckeditor button 
 core = 7.x
 dependencies[] = ckeditor:ckeditor
+stylesheets[all][] = css/singtwo.css

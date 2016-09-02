@@ -29,7 +29,7 @@ CKEDITOR.dialog.add( 'singDialog', function( editor ) {
 		],
 		onOk: function() {
             var dialog = this;
-            var colWrap = CKEDITOR.dom.element.createFromHtml( '<div class="col-wrap">hello</div>' );
+            var colWrap = CKEDITOR.dom.element.createFromHtml( '<div class="col-wrap"><div class="left-col"></div><div class="right-col"></div></div>' );
             editor.insertElement(colWrap);
             //var twocols = dialog.getContentElement( 'left-col' );
 
