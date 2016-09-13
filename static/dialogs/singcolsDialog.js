@@ -1,39 +1,44 @@
 CKEDITOR.dialog.add( 'singDialog', function( editor ) {
 	return {
 		title: "Singular Two Cols",
-		minWidth: 400,
-		minHeight: 200,
+		minWidth: 600,
+		minHeight: 400,
 
 		contents: [
 			{
-				id: 'left-col',
-				label: 'left column',
+				id: 'id-left-col',
+				label: 'Left column',
 				elements: [
 					{
-			            type: 'html',
-		                html:'<div class="col-wrap"><p>col-wrap</p></div>'
+			            type: 'textarea',
+			            id: 'el-left-col',
+			            label: 'Left column',
+		            	'default':''
 			        }
 				]
 			},
 			{
-				id:'tab-adv',
-				label: 'Advanced Settings',
+				id: 'id-right-col',
+				label: 'Right column',
 				elements: [
 					{
-		                type: 'text',
-		                id: 'id',
-		                label: 'Id'
-            		}
+			            type: 'textarea',
+			            id: 'el-right-col',
+			            label: 'Right column',
+		            	'default':''
+			        }
 				]
 			}
 		],
 		onOk: function() {
             var dialog = this;
-            var colWrap = CKEDITOR.dom.element.createFromHtml( '<div class="col-wrap"><div class="left-col"></div><div class="right-col"></div></div>' );
-            editor.insertElement(colWrap);
-            //var twocols = dialog.getContentElement( 'left-col' );
+            //var colWrap = dialog.getContentElement('id-left-col');
+            //editor.insertElement( colWrap );
+            var left_col_text = dialog.getContentElement( 'id-left-col','el-left-col' ).getInputElement();
+            var right_col_text = dialog.getContentElement( 'id-right-col','el-right-col' ).getInputElement();
 
-            //editor.insertElement( twocols );
+            editor.insertElement( left_col_text );
+            editor.insertElement( right_col_text );
         }
 
 	};
